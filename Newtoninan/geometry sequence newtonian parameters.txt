@@ -1,0 +1,19 @@
+% Optical axis definition
+nix         0                                             Global optical axis, x-component
+niy         0                                             Global optical axis, y-component
+niz         1                                             Global optical axis, z-component
+
+% Telescope geometry
+d_pupil     250[mm]                                       Entrance pupil diameter
+f           1000[mm]                                      Primary mirror focal length
+k           -1.0                                          Primary mirror conic constant
+F           f/d_pupil                                     Primary mirror focal ratio
+f_image     200[mm]                                       Image plane position (relative to optical axis)
+d_sec       f_image/F                                     Secondary mirror diameter (projected)
+delta_sec   sqrt(2)*d_sec*(d_pupil-d_sec)/(4*(f-f_image)) Secondary mirror offset (relative to optical axis)
+d_image     d_sec                                         Image plane diameter
+d_clear     0                                             Primary mirror clear diameter (use full mirror surface)
+d1_prim     260[mm]                                       Primary mirror surface diameter
+d0_prim     275[mm]                                       Primary mirror full diameter
+Tc_prim     35[mm]                                        Primary mirror thickness
+Tc_sec      10[mm]                                        Secondary mirror thickness

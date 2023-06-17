@@ -1,0 +1,35 @@
+% Wavelength
+lam       550[nm]                               Central wavelength
+N_hex     15                                    Number of hexapolar radial rings
+
+% Field angles
+theta_x1  0.0[arcmin]                           Field angle (x)
+theta_y1  0.0[arcmin]                           Field angle (y)
+theta_x2  7.5[arcmin]                           Field angle (x)
+theta_y2  0.0[arcmin]                           Field angle (y)
+theta_x3  15.0[arcmin]                          Field angle (x)
+theta_y3  0.0[arcmin]                           Field angle (y)
+
+% Ray direction and object positions:
+vx1       sin(theta_x1)         Ray direction vector, x-component
+vy1       sin(theta_y1)         Ray direction vector, y-component
+vz1      -sqrt(1-vx1^2-vy1^2)   Ray direction vector, z-component
+dx1      -f*vx1                 Object plane x-coordinate
+dy1      -f*vy1                 Object plane y-coordinate
+dz1      -f*vz1                 Object plane z-coordinate (relative to primary vertex)
+vx2       sin(theta_x2)         Ray direction vector, x-component
+vy2       sin(theta_y2)         Ray direction vector, y-component
+vz2      -sqrt(1-vx2^2-vy2^2)   Ray direction vector, z-component
+dx2      -f*vx2                 Object plane x-coordinate
+dy2      -f*vy2                 Object plane y-coordinate
+dz2      -f*vz2                 Object plane z-coordinate (relative to primary vertex)
+vx3       sin(theta_x3)         Ray direction vector, x-component
+vy3       sin(theta_y3)         Ray direction vector, y-component
+vz3      -sqrt(1-vx3^2-vy3^2)   Ray direction vector, z-component
+dx3      -f*vx3                 Object plane x-coordinate
+dy3      -f*vy3                 Object plane y-coordinate
+dz3      -f*vz3                 Object plane z-coordinate (relative to primary vertex)
+
+% Airy disc:                                   
+theta_Airy  1.22*lam/d_pupil                    Airy disc angular radius
+r_Airy      f*theta_Airy                        Airy disc radius
